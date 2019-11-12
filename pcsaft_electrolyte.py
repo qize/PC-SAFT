@@ -147,6 +147,7 @@ def pcsaft_vaporP(p_guess, x, m, s, e, t, **kwargs):
     Pvap : float
         Vapor pressure (Pa)    
     """
+    cppargs = {}
     check_input(x, 'guess pressure', p_guess, 'temperature', t)
     result = minimize(vaporPfit, p_guess, args=(x, m, s, e, t, cppargs), tol=1e-10, method='Nelder-Mead', options={'maxiter': 100})
     if result.fun > 1e-5: # Sometimes optimization doesn't work if p_guess is too large

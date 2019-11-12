@@ -933,3 +933,17 @@ def test_pressure():
     print('    Relative deviation:', (calc-ref)/ref*100, '%')
 
     return None
+
+if __name__ == '__main__':
+    test_vaporP() # cppargs
+    test_gres()
+    test_hres()
+    test_sres()
+    test_density()
+    test_bubbleP()
+    test_PTz()
+    test_osmoticC()
+    test_Hvap()
+    test_dadt()
+    test_cp()
+    test_pressure()
